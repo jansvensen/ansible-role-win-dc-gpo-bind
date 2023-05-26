@@ -9,7 +9,7 @@ function link-gpos {
 }
 
 $target = "OU=Objects,DC=dt,DC=democloud"
-$GPOs = "GPO_C_IPv6","GPO_C_PowerSettings","GPO_U_Optics_Wallpaper"
+$GPOs = "GPO_C_IPv6","GPO_C_PowerSettings","GPO_U_Optics_Wallpaper","GPO_U_Optics_User"
 link-gpos -target $target -GPOs $GPOs
 
 $target = "OU=Computer,OU=Objects,DC=dt,DC=democloud"
