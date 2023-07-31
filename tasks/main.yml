@@ -7,9 +7,9 @@
   - name: Copy Script
     ansible.builtin.copy:
       src: files/gpo-bind.ps1
-      dest: '{{ directory_gpo }}\gpo-bind.ps1'
+      dest: '{{ directory_gpo }}gpo-bind.ps1'
 
   - name: Bind GPO
     script: files/gpo-bind.ps1
     args:
-      creates: '{{ directory_logging}}\gpo-bind.txt'
+      creates: '{{ directory_logging}}gpo-bind.txt'
