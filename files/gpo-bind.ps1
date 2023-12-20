@@ -1,11 +1,6 @@
-function link-gpos {
+$target = $env:target
+$gpos = $env:gpos
 
-    [Parameter(Mandatory=$true)][String]$GPOs
-    [Parameter(Mandatory=$true)][String]$target
-    
-    $GPOs | ForEach-Object {
-        New-GPLink -Name $_ -Domain dt.democloud -Target $target -LinkEnabled Yes
-    }
+$gpos | ForEach-Object {
+    New-GPLink -Name $_ -Domain dt.democloud -Target $target -LinkEnabled Yes
 }
-
-link-gpos -target $target -GPOs $GPOs
