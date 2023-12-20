@@ -4,7 +4,7 @@
       path: '{{ directory_logging }}'
       state: directory
 
-  - name: Bind GPO to OU=Objects,DC=dt,DC=presales
+  - name: Bind GPOs
     script: files/gpo-bind.ps1
     args:
       creates: '{{ directory_logging}}gpo-bind.txt'
