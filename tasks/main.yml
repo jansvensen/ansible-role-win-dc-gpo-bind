@@ -4,10 +4,10 @@
       path: '{{ directory_gpo }}'
       state: directory
 
-  - name: Copy Script
-    ansible.builtin.copy:
-      src: files/gpo-bind.ps1
-      dest: '{{ directory_gpo }}gpo-bind.ps1'
+#  - name: Copy Script
+#    ansible.builtin.copy:
+#      src: files/gpo-bind.ps1
+#      dest: '{{ directory_gpo }}gpo-bind.ps1'
 
   - name: Bind GPO to OU=Objects,DC=dt,DC=presales
     script: files/gpo-bind.ps1
