@@ -7,3 +7,11 @@ try {
         New-GPLink -Name $_ -Domain $domain -Target $target -LinkEnabled Yes
     }
 }
+
+catch {
+
+}
+
+finally {
+    
+}
