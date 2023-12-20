@@ -10,7 +10,7 @@
       creates: '{{ directory_logging}}gpo-bind.txt'
     environment:
       target: "OU=Objects,DC=dt,DC=presales"
-      gpos: "GPO_C_IPv6,GPO_C_PowerSettings,GPO_U_Optics_Wallpaper,GPO_U_Optics_User"
+      gpos: '"GPO_C_IPv6","GPO_C_PowerSettings","GPO_U_Optics_Wallpaper","GPO_U_Optics_User"'
       domain: '{{ domain_dnsname }}'
 
   - name: Bind GPO to OU=Computer,OU=Objects,DC=dt,DC=presales
@@ -19,5 +19,5 @@
       creates: '{{ directory_logging}}gpo-bind.txt'
     environment:
       target: "OU=Computer,OU=Objects,DC=dt,DC=presales"
-      gpos: "GPO_C_DisableServerManagerOnStartup,GPO_C_LoopbackProcessing,GPO_C_NewsAndInterests,GPO_C_deviceTRUST_Geolocation_Google,GPO_C_RegionSettings,GPO_C_deviceTRUST_Basic,GPO_C_deviceTRUST_Demo_Demobox"
+      gpos: '"GPO_C_DisableServerManagerOnStartup","GPO_C_LoopbackProcessing","GPO_C_NewsAndInterests","GPO_C_deviceTRUST_Geolocation_Google","GPO_C_RegionSettings","GPO_C_deviceTRUST_Basic","GPO_C_deviceTRUST_Demo_Demobox"'
       domain: '{{ domain_dnsname }}'
