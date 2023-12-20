@@ -15,7 +15,7 @@
       creates: '{{ directory_logging}}gpo-bind.txt'
     environment:
       target: "OU=Objects,DC=dt,DC=democloud"
-      $GPOs: "GPO_C_IPv6,GPO_C_PowerSettings,GPO_U_Optics_Wallpaper,GPO_U_Optics_User"
+      GPOs: "GPO_C_IPv6,GPO_C_PowerSettings,GPO_U_Optics_Wallpaper,GPO_U_Optics_User"
 
   - name: Bind GPO to OU=Computer,OU=Objects,DC=dt,DC=democloud
     script: files/gpo-bind.ps1
@@ -23,4 +23,4 @@
       creates: '{{ directory_logging}}gpo-bind.txt'
     environment:
       target: "OU=Computer,OU=Objects,DC=dt,DC=democloud"
-      $GPOs: "GPO_C_DisableServerManagerOnStartup,GPO_C_LoopbackProcessing,GPO_C_NewsAndInterests,GPO_C_deviceTRUST_Geolocation_Google,GPO_C_RegionSettings,GPO_C_deviceTRUST_Basic,GPO_C_deviceTRUST_Demo_Demobox"
+      GPOs: "GPO_C_DisableServerManagerOnStartup,GPO_C_LoopbackProcessing,GPO_C_NewsAndInterests,GPO_C_deviceTRUST_Geolocation_Google,GPO_C_RegionSettings,GPO_C_deviceTRUST_Basic,GPO_C_deviceTRUST_Demo_Demobox"
