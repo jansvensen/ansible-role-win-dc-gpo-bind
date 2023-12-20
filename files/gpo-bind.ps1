@@ -2,16 +2,12 @@ $target = $env:target
 $gpos = $env:gpos
 $domain = $env:domain
 
-try {
-    $gpos.Split(",") | ForEach-Object {
-        New-GPLink -Name $_ -Domain $domain -Target $target -LinkEnabled Yes
-    }
-}
+$gpos.Split(",") | ForEach-Object {
+    $found = $false
+    $gponame = $_
 
-catch {
-
-}
-
-finally {
-    
+    (Get-GPInheritance -Target $target).GpoLinks.DisplayName | ForEach-Object{
+        if($_ -eq $gponame){$found = $true}    
+    }    
+    if($found -eq $false){New-GPLink -Name $gponame -Domain $domain -Target $target -LinkEnabled Yes}
 }
