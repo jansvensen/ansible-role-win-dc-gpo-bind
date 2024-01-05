@@ -7,7 +7,7 @@
   - name: Bind GPOs
     script: files/gpo-bind.ps1
     args:
-      creates: '{{ directory_logging}}gpo-bind.txt'
+      creates: '{{ directory_logging }}gpo-bind.txt'
     environment:
       target: '{{ item.target }}'
       gpos: '{{ item.gpos }}'
